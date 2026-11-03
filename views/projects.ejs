@@ -1,0 +1,25 @@
+<%- include("partials/header") %>
+
+<main class="page-content">
+  <section class="page-intro">
+    <h1><%= title %></h1>
+    <p>
+      Find a project that matches your interests and put your skills to work.
+    </p>
+  </section>
+
+  <section class="categories-section container">
+    <div class="category-grid">
+      <% projects.forEach((project) => { %>
+        <article class="category-card">
+          <span class="category-label"><%= project.category %></span>
+          <h2><%= project.name %></h2>
+          <p><%= project.description %></p>
+          <p><strong>Organized by:</strong> <%= project.organization %></p>
+        </article>
+      <% }) %>
+    </div>
+  </section>
+</main>
+
+<%- include("partials/footer") %>

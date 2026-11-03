@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+
+<main class="page-content">
+  <section class="page-intro">
+    <h1><%= title %></h1>
+    <p>
+      Browse service projects by the kind of impact you want to make.
+    </p>
+  </section>
+
+  <section class="categories-section container">
+    <div class="category-grid">
+      <% categories.forEach((category) => { %>
+        <article class="category-card">
+          <h2><%= category.name %></h2>
+          <p><%= category.description %></p>
+        </article>
+      <% }) %>
+    </div>
+  </section>
+</main>
+
+<%- include("partials/footer") %>

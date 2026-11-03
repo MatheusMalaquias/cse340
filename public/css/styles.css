@@ -1,0 +1,268 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #263238;
+  background-color: #f5f7f6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER AND NAVIGATION
+========================= */
+
+.site-header {
+  background-color: #173f35;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #a8d5ba;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+  min-height: 70vh;
+}
+
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #e2eee8;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #173f35;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  color: #455a50;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+  background-color: #173f35;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+  .site-header .container {
+    flex-direction: column;
+  }
+
+  .main-nav {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 70px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+/* =========================
+   ORGANIZATIONS PAGE
+========================= */
+
+.page-content {
+  padding-bottom: 60px;
+}
+
+.page-intro {
+  background-color: #e2eee8;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.page-intro h1 {
+  color: #173f35;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.page-intro p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.organizations-section {
+  padding-top: 50px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  color: #173f35;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.organization-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.organization-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.organization-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background-color: #ffffff;
+  padding: 12px;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.category-label {
+  color: #28745d;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.card-content h3 {
+  color: #173f35;
+  margin: 10px 0;
+  font-size: 1.4rem;
+}
+
+.card-content p {
+  margin-bottom: 18px;
+}
+
+.card-link {
+  color: #176b50;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .organization-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-intro h1 {
+    font-size: 2rem;
+  }
+}
+
+/* =========================
+   CATEGORIES PAGE
+========================= */
+
+.categories-section {
+  padding-top: 50px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.category-card {
+  background-color: #ffffff;
+  border-top: 4px solid #28745d;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.category-card h2 {
+  color: #173f35;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+a:focus-visible {
+  outline: 3px solid #a8d5ba;
+  outline-offset: 3px;
+}
+
+.category-card p {
+  margin-bottom: 12px;
+}
