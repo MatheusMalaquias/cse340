@@ -3,7 +3,7 @@ import { Pool } from "pg"
 // The pool keeps database connections open so queries can reuse them
 const pool = new Pool({
   connectionString: process.env.DB_URL,
-  ssl: true
+  ssl: { rejectUnauthorized: false }
 })
 
 // Runs a query and logs its text, duration, and number of rows
