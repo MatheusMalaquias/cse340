@@ -266,3 +266,157 @@ a:focus-visible {
 .category-card p {
   margin-bottom: 12px;
 }
+/* =========================
+   LINKS IN CARDS
+========================= */
+
+.card-content h2 {
+  color: #173f35;
+  margin: 10px 0;
+  font-size: 1.4rem;
+}
+
+.card-content h2 a,
+.category-card h2 a {
+  color: #173f35;
+  text-decoration: none;
+}
+
+.card-content h2 a:hover,
+.category-card h2 a:hover {
+  text-decoration: underline;
+}
+
+.category-card a,
+.detail-card a,
+.link-list a {
+  color: #176b50;
+  font-weight: bold;
+}
+
+.card-date {
+  color: #28745d;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* =========================
+   DETAIL PAGES
+========================= */
+
+.back-link {
+  color: #176b50;
+  font-weight: bold;
+}
+
+.detail-section {
+  padding-top: 40px;
+  max-width: 900px;
+}
+
+.detail-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 32px;
+}
+
+.detail-card p {
+  margin-bottom: 12px;
+}
+
+.detail-image {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  margin: 0 auto 20px;
+}
+
+.section-title {
+  color: #173f35;
+  font-size: 1.5rem;
+  margin: 8px 0 16px;
+}
+
+.link-list {
+  list-style: none;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.link-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e2eee8;
+}
+
+.link-list li:last-child {
+  border-bottom: none;
+}
+
+.list-meta {
+  color: #455a50;
+  font-size: 0.95rem;
+}
+
+.empty-message {
+  color: #455a50;
+  font-style: italic;
+}
+
+/* =========================
+   CATEGORY TAGS
+========================= */
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e2eee8;
+  color: #173f35;
+  border: 1px solid #28745d;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.detail-card .tag {
+  color: #173f35;
+}
+
+.tag:hover {
+  background-color: #173f35;
+  color: #ffffff;
+}
+
+.detail-card .tag:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   ERROR DETAILS
+========================= */
+
+.error-stack {
+  background-color: #263238;
+  color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

@@ -1,0 +1,39 @@
+<%- include("partials/header") %>
+
+<main class="page-content">
+  <section class="page-intro">
+    <h1><%= title %></h1>
+    <p><a href="/projects" class="back-link">&larr; Upcoming projects</a></p>
+  </section>
+
+  <section class="detail-section container">
+    <article class="detail-card">
+      <p>
+        <strong>Organization:</strong>
+        <a href="/organization/<%= projectDetails.organization_id %>"><%= projectDetails.organization_name %></a>
+      </p>
+      <p>
+        <strong>Date:</strong>
+        <%= projectDetails.project_date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) %>
+      </p>
+      <p><strong>Location:</strong> <%= projectDetails.location %></p>
+      <p><%= projectDetails.description %></p>
+
+      <h2 class="section-title">Categories</h2>
+
+      <% if (categories.length === 0) { %>
+        <p class="empty-message">This project has no categories yet.</p>
+      <% } else { %>
+        <ul class="tag-list">
+          <% categories.forEach((category) => { %>
+            <li>
+              <a href="/category/<%= category.category_id %>" class="tag"><%= category.name %></a>
+            </li>
+          <% }) %>
+        </ul>
+      <% } %>
+    </article>
+  </section>
+</main>
+
+<%- include("partials/footer") %>

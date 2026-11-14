@@ -1,0 +1,22 @@
+<%- include("../partials/header") %>
+
+<main class="page-content">
+  <section class="page-intro">
+    <h1><%= title %></h1>
+    <p>Something went wrong on our end. Please try again later.</p>
+  </section>
+
+  <section class="detail-section container">
+    <article class="detail-card">
+      <p><a href="/">Go back to the home page</a></p>
+
+      <% if (NODE_ENV === "development") { %>
+        <h2 class="section-title">Error details (development only)</h2>
+        <p><strong><%= error %></strong></p>
+        <pre class="error-stack"><%= stack %></pre>
+      <% } %>
+    </article>
+  </section>
+</main>
+
+<%- include("../partials/footer") %>

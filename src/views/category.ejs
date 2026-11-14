@@ -1,0 +1,30 @@
+<%- include("partials/header") %>
+
+<main class="page-content">
+  <section class="page-intro">
+    <h1><%= title %></h1>
+    <p><a href="/categories" class="back-link">&larr; All categories</a></p>
+  </section>
+
+  <section class="detail-section container">
+    <h2 class="section-title">Service Projects</h2>
+
+    <% if (projects.length === 0) { %>
+      <p class="empty-message">There are no service projects in this category yet.</p>
+    <% } else { %>
+      <ul class="link-list">
+        <% projects.forEach((project) => { %>
+          <li>
+            <a href="/project/<%= project.project_id %>"><%= project.title %></a>
+            <span class="list-meta">
+              <%= project.organization_name %> &middot;
+              <%= project.project_date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) %>
+            </span>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+  </section>
+</main>
+
+<%- include("partials/footer") %>

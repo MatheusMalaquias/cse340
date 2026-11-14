@@ -2,7 +2,7 @@
 
 <main class="page-content">
   <section class="page-intro">
-    <h1>Find Your Community</h1>
+    <h1><%= title %></h1>
     <p>
       Connect with people who share your interests,
       exchange knowledge, and grow together.
@@ -10,11 +10,6 @@
   </section>
 
   <section class="organizations-section container">
-    <div class="section-heading">
-      <h2>Explore Communities</h2>
-      <p>Find your people. Share what you know. Learn something new.</p>
-    </div>
-
     <div class="organization-grid">
       <% organizations.forEach((organization) => { %>
         <article class="organization-card">
@@ -24,7 +19,11 @@
           >
 
           <div class="card-content">
-            <h3><%= organization.name %></h3>
+            <h2>
+              <a href="/organization/<%= organization.organization_id %>">
+                <%= organization.name %>
+              </a>
+            </h2>
 
             <p><%= organization.description %></p>
 
